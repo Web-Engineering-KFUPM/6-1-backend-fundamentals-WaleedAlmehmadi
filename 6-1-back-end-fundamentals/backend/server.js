@@ -1,5 +1,6 @@
 // TODO 1: Import Express
 import express from 'express';
+import cors from 'cors';
 
 
 
@@ -9,6 +10,7 @@ const app = express();
 
 
 // TODO 3: Allow React to access the server
+app.use(cors());
 
 
 
@@ -25,3 +27,6 @@ const app = express();
 
 
 // TODO 4: Start the server on port 3000
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
